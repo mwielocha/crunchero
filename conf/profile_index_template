@@ -1,0 +1,228 @@
+PUT profile_template
+{
+   "template": "profile*",
+   "settings": {
+      "index": {
+         "number_of_shards": 6,
+         "number_of_replicas": 0
+      }
+   },
+   "mappings": {
+      "variable": {
+         "properties": {
+            "value": {
+               "properties": {
+                  "variable": {
+                     "type": "string",
+                     "index": "not_analyzed"
+                  },
+                  "value": {
+                     "type": "string",
+                     "index": "not_analyzed"
+                  },
+                  "domain": {
+                     "type": "string",
+                     "index": "not_analyzed"
+                  },
+                  "source": {
+                     "type": "string",
+                     "index": "not_analyzed"
+                  }
+               }
+            },
+            "things": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "dateTime": {
+               "type": "date"
+            },
+            "member": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "filters": {
+               "type": "string",
+               "index": "not_analyzed",
+               "null_value" : "none"
+            },
+            "status": {
+               "type": "string",
+               "index": "not_analyzed"
+            }
+         }
+      },
+      "opinionResponse": {
+         "properties": {
+            "value": {
+               "properties": {
+                  "response": {
+                     "properties": {
+                        "memberId": {
+                           "type": "string",
+                           "index": "not_analyzed"
+                        }
+                     }
+                  },
+                  "opi": {
+                     "properties": {
+                        "opi": {
+                           "properties": {
+                              "memberId": {
+                                 "type": "string",
+                                 "index": "not_analyzed"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            },
+            "things": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "dateTime": {
+               "type": "date"
+            },
+            "member": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "filters": {
+               "type": "string",
+               "index": "not_analyzed",
+               "null_value" : "none"
+            },
+            "status": {
+               "type": "string",
+               "index": "not_analyzed"
+            }
+         }
+      },
+      "opinion": {
+         "properties": {
+            "value": {
+               "properties": {
+                  "opi": {
+                     "properties": {
+                        "memberId": {
+                           "type": "string",
+                           "index": "not_analyzed"
+                        }
+                     }
+                  }
+               }
+            },
+            "things": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "dateTime": {
+               "type": "date"
+            },
+            "member": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "filters": {
+               "type": "string",
+               "index": "not_analyzed",
+               "null_value" : "none"
+            },
+            "status": {
+               "type": "string",
+               "index": "not_analyzed"
+            }
+         }
+      },
+      "surveyCompletion": {
+         "properties": {
+            "value": {
+               "properties": {
+                  "survey_uuid": {
+                     "type": "string",
+                     "index": "not_analyzed"
+                  },
+                  "questions": {
+                     "properties": {
+                        "question_uuid": {
+                           "type": "string",
+                           "index": "not_analyzed"
+                        }
+                     }
+                  }
+               }
+            },
+            "things": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "dateTime": {
+               "type": "date"
+            },
+            "member": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "filters": {
+               "type": "string",
+               "index": "not_analyzed",
+               "null_value" : "none"
+            },
+            "status": {
+               "type": "string",
+               "index": "not_analyzed"
+            }
+         }
+      },
+      "attitude": {
+         "properties": {
+            "value": {
+               "properties": {
+                  "survey_uuid": {
+                     "type": "string",
+                     "index": "not_analyzed"
+                  },
+                  "questions": {
+                     "properties": {
+                        "question_uuid": {
+                           "type": "string",
+                           "index": "not_analyzed"
+                        }
+                     }
+                  },
+                  "answer": {
+                    "properties": {
+                        "position": {
+                            "type": "integer",
+                            "index": "not_analyzed"
+                        }
+                    }
+                  }
+               }
+            },
+            "things": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "dateTime": {
+               "type": "date"
+            },
+            "member": {
+               "type": "string",
+               "index": "not_analyzed"
+            },
+            "filters": {
+               "type": "string",
+               "index": "not_analyzed",
+               "null_value" : "none"
+            },
+            "status": {
+               "type": "string",
+               "index": "not_analyzed"
+            }
+         }
+      }
+   }
+}
